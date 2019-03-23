@@ -153,7 +153,7 @@ createRestaurantHTML = (restaurant) => {
   image.src = link.replace('.jpg', '-320w.jpg');
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
@@ -194,10 +194,3 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js');
   });
 }
-
-var refreshing;
-navigator.serviceWorker.addEventListener('controllerchange', function() {
-  if (refreshing) return;
-  window.location.reload();
-  refreshing = true;
-});

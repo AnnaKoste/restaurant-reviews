@@ -169,11 +169,11 @@ class DBHelper {
 }
 
 var windowOnloadAdd = function (event) {
-   if ( window.onload ){
-      window.onload = window.onload + event;
-   } else {
-      window.onload = event;
-   };
+  if ( window.onload ){
+    window.onload = window.onload + event;
+  } else {
+    window.onload = event;
+  };
 };
 
 windowOnloadAdd(function() {
