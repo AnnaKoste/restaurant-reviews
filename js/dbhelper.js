@@ -8,10 +8,10 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-    return `https://annakoste.github.io/restaurant-reviews/data/restaurants.json`;
+    return `data/restaurants.json`;
   }
 
-  /**
+  /**https://annakoste.github.io/restaurant-reviews/
    * Fetch all restaurants.
    */
   static fetchRestaurants(callback) {
@@ -149,7 +149,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    return (`./img/${restaurant.photograph}`);
   }
 
   /**
